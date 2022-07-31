@@ -9,18 +9,17 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { GraphWrapper } from './Graph.styled'
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend
 );
@@ -63,10 +62,12 @@ export const Graph = () => {
   };
 
   return (
-    <>
+    <GraphWrapper>
       {
-        sales.length ? (<Line options={options} data={data} />) : <></>
+        sales.length ?
+          (<Line options={options} data={data} />) :
+          <></>
       }
-    </>
+    </GraphWrapper>
   )
 }

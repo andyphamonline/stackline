@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import { getTitle, getImage, getSubtitle, getTags } from "../../../state/selectors"
-import { tagSpan } from './Card.styled'
+import { CardWrapper, TagWrapper } from './Card.styled'
 
 export const Card = () => {
   const title = useSelector(getTitle)
@@ -9,14 +9,16 @@ export const Card = () => {
   const tags = useSelector(getTags)
 
   return (
-		<div>
-			{/* <img src={image} alt={subtitle} /> */}
+		<CardWrapper>
+			<img src={image} alt={subtitle} />
 			<h3>{title}</h3>
 			<p>{subtitle}</p>
       <hr></hr>
-      {tags && tags.map((tag, id) => (
-        <tagSpan key={id}>{tag}</tagSpan>
-      ))}
-		</div>
+      <TagWrapper>
+        {tags && tags.map((tag, id) => (
+          <span key={id}>{tag}</span>
+        ))}
+      </TagWrapper>
+		</CardWrapper>
 	)
 }

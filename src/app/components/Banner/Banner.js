@@ -1,5 +1,9 @@
+import { BannerWrapper } from "./Banner.styled"
+
 export const Banner = () => {
   return (
-    <div>Banner</div>
+    <BannerWrapper>
+      <img src='stackline_logo.svg' alt='Stackline logo' />
+    </BannerWrapper>
   )
 }

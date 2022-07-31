@@ -1,0 +1,40 @@
+You may use any public npm packages.
+A JSON file to be used as the data source to populate the web page
+A wire mockup of what your final web page should look like
+
+We are looking for:
+  A solution that resembles the provided mock up closely and implements AT LEAST ONE of either the graph or chart as seen in the mock up
+  A working solution that takes the provided JSON file as output from a stubbed-out API call
+  A solution that implements React and Redux best practices and patterns
+  Clean code
+
+Nice to haves:
+  Additional functionality in the graph or table, e.g. sorting, overlays
+
+A public repository to view the final code
+A public URL to view the web page --- can be hosted on GitHub Pages, AWS, Vercel, etc.
+
+***************************************
+- Redux:
+  - items: [
+    id
+    title
+    image
+    subtitle
+    tags: []
+    sales: [
+      {
+        "weekEnding": "2017-01-01",
+        "retailSales": 348123,
+        "wholesaleSales": 255721,
+        "unitsSold": 887,
+        "retailerMargin": 123294
+      }
+    ]
+  ]
+
+
+TO DO:
+- fetch data
+- Bugs:
+  - tagSpan
